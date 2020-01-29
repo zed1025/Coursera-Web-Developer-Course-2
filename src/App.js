@@ -3,8 +3,17 @@ import logo from './logo.svg';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
 import './App.css';
+import {DISHES} from './shared/dishes';
 
 class App extends Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      dishes: DISHES,
+    };
+  }
+
   render() {
     return (
       <div>
@@ -13,7 +22,8 @@ class App extends Component{
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
           </div>
         </Navbar>
-        <Menu/>
+        {/* "dishes" that is in the state of App component is made available to the Menu component through "props" */}
+        <Menu dishes={this.state.dishes}/>
       </div>
     );
   }
