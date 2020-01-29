@@ -1,3 +1,6 @@
+# confusion
+- This repository contains the project for, **Front-End Web Development using React**, course on **Coursera** by **Hong Kong University**.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
