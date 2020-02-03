@@ -4,7 +4,7 @@ import {Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle} from 'reac
 //functional component(first way to make then)
 function RenderMenuItem( { dish, onClick } ){
   return (
-    <Card onClick={() => onClick(dish.id)}>
+    <Card>
       <CardImg width="100%" object src={dish.image} alt={dish.name}/>
       <CardImgOverlay body className="ml-5">
         <CardTitle heading>{dish.name}</CardTitle>
