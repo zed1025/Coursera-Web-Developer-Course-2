@@ -26,7 +26,6 @@ class DishDetail extends Component {
     }
   }
 
-  // takes comments array as parameter and and lays out each comment is the order given in the assignment photo
   renderComments(comments) {
     const options = { year: "numeric", month: "short", day: "numeric" };
     if(comments != null) {
@@ -45,19 +44,22 @@ class DishDetail extends Component {
 
   render() {
     const {dish} = this.props;
+    console.log(this.props);
 
-    return (
+
+    return dish?(
+      <div className="container">
         <div className="row">
           <div className="col-12 col-md-5 m-1">
-            {this.renderDish(this.props.dish)}
+            {this.renderDish(dish)}
           </div>
           <div className="col-12 col-md-5 m-1">
             <h4>Comments</h4>
             {this.renderComments(dish.comments)}
           </div>
         </div>
-        
-    );
+      </div>
+    ):(<div></div>);
   }
 }
 
